@@ -4,12 +4,13 @@ Boilerplate setup for React, Webpack with Hot Module Replacement
 ```
 $ cd this project
 $ npm install
-$npm start(本地调试)
+$npm start(本地调试)：默认会自动打开http://localhost:8002
 
-$ npm run build(上线)
+$ npm run build(不需要本地调试，则开这个指令)
 ```
 
-#Go to [localhost:3000](http://localhost:3000)
+
+#Go to [localhost:8002](http://localhost:8002)
 
 Edit your code and watch while awesome happen automagically.
 
