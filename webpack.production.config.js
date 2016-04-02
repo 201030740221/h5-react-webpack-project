@@ -4,7 +4,7 @@ var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-source-map',
+  devtool: false,
   entry: [
     path.resolve(__dirname, 'app/_window.js'),
     path.resolve(__dirname, 'app/main.jsx')
@@ -33,8 +33,7 @@ module.exports = {
       }
     }),
     new CopyWebpackPlugin([
-      { from: './app/index.html', to: 'index.html' },
-      { from: './app/main.css', to: 'main.css' }
+      { from: './app/index.html', to: 'index.html' }
     ]),
   ]
 };

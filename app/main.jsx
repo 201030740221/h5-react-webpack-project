@@ -11,6 +11,7 @@ import Main from './views/Main';
 import Home from './views/Home';
 import InputPage from './views/InputPage';
 import ShowNumPage from './views/ShowNumPage';
+import AttentionPage from './views/AttentionPage';
 
 var routes = (
   <Router history={appHistory}>
@@ -18,6 +19,7 @@ var routes = (
           <IndexRoute component={Home}/>
           <Route component={InputPage} path='input_page' name="input_page"/>
           <Route component={ShowNumPage} path='show_page' name="show_page" />
+          <Route component={AttentionPage} path='attention_page' name="attention_page" />
       </Route>
   </Router>
 );

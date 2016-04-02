@@ -10,7 +10,7 @@ var InputPage = React.createClass({
         	random_num: 1,
            	people_data: [
 	           {
-	            key:1,img:{url:'pic1.gif', width: '100' },ani_img:{url:'ani_pic1.gif'},
+	            key:1,img:{url:'pic1.png', width: '100' },ani_img:{url:'ani_pic1.gif'},
 	           	content: [
 	           		{title:'我是罗振宇，更是大家熟知的罗胖，'},
 	           		{title:'我是一位有点与时俱进卖货郎，'},
@@ -18,7 +18,7 @@ var InputPage = React.createClass({
 	           		{title:'来，碰碰手指，让我给你更多的能量'},
 	           	]
 	           },{
-	            key:2,img:{url:'pic2.gif', width: '100' },ani_img:{url:'ani_pic2.gif'},
+	            key:2,img:{url:'pic2.png', width: '100' },ani_img:{url:'ani_pic2.gif'},
 	           	content: [
 	           		{title:' 我是彼得蒂尔，我是硅谷的创投教父，'},
 	           		{title:'也是最火的商业著作《从0到1》的作者，'},
@@ -26,7 +26,7 @@ var InputPage = React.createClass({
 	           		{title:'不如一起来，造就新未来'},
 	           	]
 	           }, {
-	            key:3,img:{ url:'pic3.gif', width: '100' },ani_img:{url:'ani_pic3.gif'},
+	            key:3,img:{ url:'pic3.png', width: '100' },ani_img:{url:'ani_pic3.gif'},
 	           	content: [
 	           		{title:'我是杨石头，我是一名品牌营销达人，'},
 	           		{title:'专攻互联网+品牌营销新打法，'},
@@ -34,14 +34,14 @@ var InputPage = React.createClass({
 	           		{title:'我有料，你有趣，我们一起来玩'},
 	           	]
 	           }, {
-	            key:4,img:{url:'pic4.gif', width: '100' },ani_img:{url:'ani_pic4.gif'},
+	            key:4,img:{url:'pic4.png', width: '100' },ani_img:{url:'ani_pic4.gif'},
 	           	content: [
 	           		{title:'我是张怡筠，我是一名心理专家，'},
 	           		{title:'盯着我，让我在你的眼神中窥探你的心灵，'},
 	           		{title:'一起了解更真实的你.'}
 	           	]
 	           }, {
-	            key:5,img:{ url:'pic5.gif', width: '100' },ani_img:{url:'ani_pic5.gif'},
+	            key:5,img:{ url:'pic5.png', width: '100' },ani_img:{url:'ani_pic5.gif'},
 	           	content: [
 	           		{title:'我是宗毅，我是一名企业战略专家，'},
 	           		{title:'我是创业投资人，我的大脑有满满的企业成功秘笈，'},
@@ -60,8 +60,25 @@ var InputPage = React.createClass({
     },
     clickHandle(type){
 		var _val = $('#nickname').val();
+		var random_num = this.state.random_num;
+		var _name = '';
+		if(random_num==1){
+			_name='罗振宇'
+		}
+		if(random_num==2){
+			_name='彼得蒂尔'
+		}
+		if(random_num==3){
+			_name='杨石头'
+		}
+		if(random_num==4){
+			_name='张怡筠'
+		}
+		if(random_num==5){
+			_name='宗毅'
+		}
 		if(_val){
-			this.context.router.push('/show_page?nickname='+_val);
+			this.context.router.push('/show_page?nickname='+_val+'_'+_name);
 			return;
 		}  	
     	this.setState({
@@ -72,6 +89,7 @@ var InputPage = React.createClass({
     render: function () {
     	var people_data = this.state.people_data;
     	var random_num = this.state.random_num;
+
         return (
             <div className='whole_page'>
                 <div className="tree1"></div>
@@ -86,9 +104,9 @@ var InputPage = React.createClass({
 								return (
 									<div className="" key={key}>
 										<div className="people_section mb-20">
-											<img src={"../images/"+item.img.url} alt="" width='100' />
+											<img src={dirUrl+"images/"+item.img.url} alt="" width='100' />
 											<div className='other_ani_pic'>
-												<img src={"../images/"+item.ani_img.url} alt="" width='100' />
+												<img src={dirUrl+"images/"+item.ani_img.url} alt="" width='100' />
 											</div>
 										</div>
 										{
@@ -100,20 +118,20 @@ var InputPage = React.createClass({
 												)
 											})
 										}
-									</div>	
+									</div>
 								)
 							}
 						})
 					}
-						
-						<div className="input_section">						
+
+						<div className="input_section">
 							<input type="text" className="input_content" id="nickname" placeholder="请输入姓名获取能量" />
 						</div>
-						 
-	                    <div className="send_btn" onClick={this.clickHandle.bind(null,'shown')}>
-	                    	 <div className="click_ani_btn"></div>
-	                    </div>
-		                
+
+						<div className="send_btn" onClick={this.clickHandle.bind(null,'shown')}>
+							 <div className="click_ani_btn"></div>
+						</div>
+
 					</div>
 
 					<div className={"mask "+this.state._class} onClick={this.clickHandle.bind(null,'hidden')}>

@@ -138,32 +138,7 @@ body :-ms-input-placeholder {
 .music-icon.true{
   display:block;
 }
-@keyframes rotating {
-  0% {
-    -webkit-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -o-transform: rotate(0);
-    transform: rotate(0); }
 
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);  }
-}
-@-webkit-keyframes rotating {
-  0% {
-    -webkit-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -o-transform: rotate(0);
-    transform: rotate(0); }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);  }
-}
 .on{
   opacity: .75;
   animation: rotating 1.6s linear infinite;
@@ -223,7 +198,7 @@ body :-ms-input-placeholder {
 .tree1{
   position: absolute;
   top: -40px;
-  left: 20%;
+  left: 40%;
   width: 28px;
   height: 30px;
   background: url(../images/tree_icon1.png) no-repeat;
@@ -233,64 +208,78 @@ body :-ms-input-placeholder {
   -moz-animation: tree_animate 15s linear 0s infinite normal;
   -webkit-animation: tree_animate 15s linear 0s infinite normal;
   -o-animation: tree_animate 15s linear 0s infinite normal;
+
+  &.other_tree{
+    left: 2%;
+    animation: tree_leftToRight_animate 15s linear 0s infinite normal;
+    -moz-animation: tree_leftToRight_animate 15s linear 0s infinite normal;
+    -webkit-animation: tree_leftToRight_animate 15s linear 0s infinite normal;
+    -o-animation: tree_leftToRight_animate 15s linear 0s infinite normal;
+  }
 }
 .tree2{
   position: absolute;
-  left: 40%;
+  left: 55%;
   top: -40px;
   width: 25px;
   height: 17px;
   background: url(../images/tree_icon2.png) no-repeat;
   z-index: 3;
   background-size: cover;
-  animation: tree_animate 14s linear 3s infinite normal;
-  -moz-animation: tree_animate 14s linear 3s infinite normal;
-  -webkit-animation: tree_animate 14s linear 3s infinite normal;
-  -o-animation: tree_animate 14s linear 3s infinite normal;
+  animation: tree_animate 14s linear 4s infinite normal;
+  -moz-animation: tree_animate 14s linear 4s infinite normal;
+  -webkit-animation: tree_animate 14s linear 4s infinite normal;
+  -o-animation: tree_animate 14s linear 4s infinite normal;
+
+  &.other_tree{
+    left: 5%;
+    animation: tree_leftToRight_animate 14s linear 4s infinite normal;
+    -moz-animation: tree_leftToRight_animate 14s linear 4s infinite normal;
+    -webkit-animation: tree_leftToRight_animate 14s linear 4s infinite normal;
+    -o-animation: tree_leftToRight_animate 14s linear 4s infinite normal;
+  }
 }
 .tree3{
   position: absolute;
-  left: 50%;
+  left: 70%;
   top: -50px;
   width: 16px;
   height: 21px;
   background: url(../images/tree_icon3.png) no-repeat;
   z-index: 3;
   background-size: cover;
-  animation: tree_animate 15s linear 5s infinite normal;
-  -moz-animation: tree_animate 15s linear 5s infinite normal;
-  -webkit-animation: tree_animate 15s linear 5s infinite normal;
-  -o-animation: tree_animate 15s linear 5s infinite normal;
+  animation: tree_animate 15s linear 6s infinite normal;
+  -moz-animation: tree_animate 15s linear 6s infinite normal;
+  -webkit-animation: tree_animate 15s linear 6s infinite normal;
+  -o-animation: tree_animate 15s linear 6s infinite normal;
+
+ &.other_tree{
+    left: 10%;
+    animation: tree_leftToRight_animate 15s linear 6s infinite normal;
+    -moz-animation: tree_leftToRight_animate 15s linear 6s infinite normal;
+    -webkit-animation: tree_leftToRight_animate 15s linear 6s infinite normal;
+    -o-animation: tree_leftToRight_animate 15s linear 6s infinite normal;
+  }
 }
 .tree4{
   position: absolute;
-  left: 60%;
+  left: 75%;
   top: -10%;
   width: 16px;
   height: 21px;
   background: url(../images/tree_icon4.png) no-repeat;
   z-index: 3;
   background-size: cover;
-  animation: tree_animate 12s linear 7s infinite normal;
-  -moz-animation: tree_animate 12s linear 7s infinite normal;
-  -webkit-animation: tree_animate 12s linear 7s infinite normal;
-  -o-animation: tree_animate 12s linear 7s infinite normal;
-}
+  animation: tree_animate 12s linear 11s infinite normal;
+  -moz-animation: tree_animate 12s linear 11s infinite normal;
+  -webkit-animation: tree_animate 12s linear 11s infinite normal;
+  -o-animation: tree_animate 12s linear 11s infinite normal;
 
-
-@keyframes tree_animate {
-  from {
-   top: 40px;
-  }
-  to {
-    top: 110%;
-  }
-}
-@-webkit-keyframes tree_animate {
-  from {
-    top: 40px;
-  }
-  to {
-    top: 110%;
+ &.other_tree{
+    left: 15%;
+    animation: tree_leftToRight_animate 12s linear 11s infinite normal;
+    -moz-animation: tree_leftToRight_animate 12s linear 11s infinite normal;
+    -webkit-animation: tree_leftToRight_animate 12s linear 11s infinite normal;
+    -o-animation: tree_leftToRight_animate 12s linear 11s infinite normal;
   }
 }
