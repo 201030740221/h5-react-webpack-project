@@ -6,7 +6,7 @@ $ cd this project
 $ npm install
 $npm start(本地调试)：默认会自动打开http://localhost:8002
 
-$ npm run build(不需要本地调试，则开这个指令)
+$ npm run deploy(不需要本地调试，则开这个指令)
 ```
 
 
